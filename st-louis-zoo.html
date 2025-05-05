@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. Louis Zoo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#FDF6EC] text-[#3E2723] font-sans transition-colors duration-300">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-[#C79A61] dark:bg-[#9A7A3D] p-4 flex justify-between items-center shadow-md">
+    <a href="index.html" class="text-2xl font-bold hover:text-[#2C786C] rounded">St. Louis Travel</a>
+    <div>
+      <a href="index.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Home</a>
+      <a href="main-attractions.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Main Attractions</a>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative h-80 bg-cover bg-center" style="background-image: url('images/st-louis-zoo.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative text-center text-white z-10 flex flex-col justify-center items-center h-full">
+      <h1 class="text-4xl font-bold">St. Louis Zoo</h1>
+      <p class="text-xl mt-2">Explore a wide variety of animals and exhibits at the St. Louis Zoo.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+
+    <!-- Video Section -->
+    <section class="text-center bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097]" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold mb-4 text-[#2C786C]">Explore the Zoo</h2>
+      <div class="aspect-video w-full rounded-md shadow-lg">
+        <iframe 
+          class="w-full h-full rounded-md"
+          src="https://www.youtube.com/embed/f_pmO2eRqjM?si=BacQ3JwaMcveee3w" 
+          title="St.Louis Zoo" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Visitor Info -->
+    <section class="bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097]" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-2xl font-semibold mb-4 text-[#2C786C]">Visitor Information</h3>
+      <ul class="text-lg space-y-3">
+        <li><strong>Opening Hours:</strong> 9:00 AM – 5:00 PM (Daily)</li>
+        <li><strong>Best Time to Visit:</strong> Year-round with special events during the holidays</li>
+        <li><strong>Nearby Attractions:</strong>
+          <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
+            <li><a href="https://www.google.com/maps/place/St.+Louis+Aquarium+at+Union+Station/@38.6277735,-90.2123052,17z/data=!3m1!5s0x87d8b36b9f28aa79:0x61c45a2316a79ab4!4m10!1m2!2m1!1splaces+near+st+louis+zoo!3m6!1s0x87d8b3677a1a5a1f:0xd4b73c35228866cd!8m2!3d38.6277735!4d-90.2075416!15sChhwbGFjZXMgbmVhciBzdCBsb3VpcyB6b29aGiIYcGxhY2VzIG5lYXIgc3QgbG91aXMgem9vkgEIYXF1YXJpdW2aASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTkdYM0pITFZwQkVBReABAPoBBAhSEEE!16s%2Fg%2F11f64cdb23?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-700 hover:underline">St. Louis Aquarium</a></li>
+            <li><a href="https://www.google.com/maps/place/River's+Edge/@38.633919A9,-90.2971515,17z/data=!4m10!1m2!2m1!1splaces+near+st+louis+zoo!3m6!1s0x87d8b55d043d4e73:0x76ae64ae5a21f866!8m2!3d38.6339199!4d-90.2923879!15sChhwbGFjZXMgbmVhciBzdCBsb3VpcyB6b29aGiIYcGxhY2VzIG5lYXIgc3QgbG91aXMgem9vkgEDem9v4AEA!16s%2Fg%2F11cs46bnjx?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-700 hover:underline">River's Edge</a></li>
+            <li><a href="https://www.google.com/maps/place/Sea+Lion+Sound/@38.6339199,-90.2971515,17z/data=!4m10!1m2!2m1!1splaces+near+st+louis+zoo!3m6!1s0x87d8b518d5ffb5e3:0xb8c886b61f619899!8m2!3d38.6350277!4d-90.2900117!15sChhwbGFjZXMgbmVhciBzdCBsb3VpcyB6b29aGiIYcGxhY2VzIG5lYXIgc3QgbG91aXMgem9vkgESdG91cmlzdF9hdHRyYWN0aW9umgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU5vY0hGcGRVZFJFQUXgAQD6AQQIABAj!16s%2Fg%2F11nx0v6y7d?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-700 hover:underline">Sea Lion Sound</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Google Map Embed -->
+    <section class="bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097] text-center" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-2xl font-semibold mb-4 text-[#2C786C]">Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.607184736702!2d-90.29574110321043!3d38.63491689999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b55ccc04062d%3A0x6075080197e8e830!2sSaint%20Louis%20Zoo!5e0!3m2!1sen!2sus!4v1744685183699!5m2!1sen!2sus"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg">
+      </iframe>
+
+      <a href="https://www.google.com/maps/place/Saint+Louis+Zoo/@38.6349211,-90.2935524,17z/data=!3m1!4b1!4m6!3m5!1s0x87d8b55ccc04062d:0x6075080197e8e830!8m2!3d38.6349169!4d-90.2909775!16zL20vMDE4aHZ4?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-block mt-4 bg-[#F76C5E] hover:bg-[#d9564a] text-white px-6 py-2 rounded-full shadow-md">
+        View on Google Maps
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-6 text-[#3E2723] text-sm">
+    Thank You
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      easing: 'ease-in-out', // easing for animations
+    });
+  </script>
+
+</body>
+</html>

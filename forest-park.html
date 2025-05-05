@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forest Park - St. Louis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#FDF6EC] text-[#3E2723] font-sans transition-colors duration-300">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-[#C79A61] dark:bg-[#9A7A3D] p-4 flex justify-between items-center shadow-md">
+    <a href="index.html" class="text-2xl font-bold hover:text-[#2C786C] rounded">St. Louis Travel</a>
+    <div>
+      <a href="index.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Home</a>
+      <a href="main-attractions.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Main Attractions</a>
+      <a href="my-trip.html" class="px-4 py-2 hover:text-[#2C786C] rounded">My Trip</a>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative h-80 bg-cover bg-center" style="background-image: url('images/forest-park.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative text-center text-white z-10 flex flex-col justify-center items-center h-full">
+      <h1 class="text-4xl font-bold">Forest Park</h1>
+      <p class="text-xl mt-2">One of America's largest urban parks — nature, culture, and fun.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+
+    <!-- Video Section -->
+    <section class="text-center bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097]" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold mb-4 text-[#2C786C]">Explore the Park</h2>
+      <div class="aspect-video w-full rounded-md shadow-lg">
+        <iframe 
+          class="w-full h-full rounded-md"
+          src="https://www.youtube.com/embed/5qlYHFWhGNE?si=d2QEUVLPlKuxMffq" 
+          title="Forest Park" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Visitor Info -->
+    <section class="bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097]" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-2xl font-semibold mb-4 text-[#2C786C]">Plan Your Visit</h3>
+      <ul class="text-lg space-y-3">
+        <li><strong>Opening Hours:</strong> 6:00 AM – 10:00 PM daily</li>
+        <li><strong>Best Time to Visit:</strong> Spring and Fall for the best weather and scenery</li>
+        <li><strong>Nearby Places:</strong>
+          <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
+            <li><a href="https://www.google.com/maps/place/Balloon+Glow/@38.6400902,-90.2828953,15.22z/data=!4m14!1m7!3m6!1s0x87d8b538753b8811:0x833688dce8020e10!2sMunicipal+Theatre+Association+of+St.+Louis!8m2!3d38.6407638!4d-90.2805269!16zL20vMDc0dHRq!3m5!1s0x87d8b53950a813c3:0x51c895d774f7c5e1!8m2!3d38.6375794!4d-90.2764174!16s%2Fg%2F11b90cdvjd?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-700 hover:underline">Balloon Glow</a></li>
+            <li><a href="https://www.google.com/maps/place/Missouri+History+Museum/@38.6476345,-90.2879624,14.48z/data=!4m6!3m5!1s0x87d8b54ed1946807:0xec3f438953c3b266!8m2!3d38.6452478!4d-90.2857383!16zL20vMDhyNnBw?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-700 hover:underline">Missouri History Museum</a></li>
+            <li><a href="https://www.google.com/maps/place/Municipal+Theatre+Association+of+St.+Louis/@38.640768,-90.2831018,17z/data=!3m1!4b1!4m6!3m5!1s0x87d8b538753b8811:0x833688dce8020e10!8m2!3d38.6407638!4d-90.2805269!16zL20vMDc0dHRq?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-700 hover:underline">The Muny Theater</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Map Embed -->
+    <section class="bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097] text-center" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-2xl font-semibold mb-4 text-[#2C786C]">Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.5098252813846!2d-90.28837232460755!3d38.637156162018485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b5469178c4c9%3A0x9d27c5026db294aa!2sForest%20Park!5e0!3m2!1sen!2sus!4v1744684929481!5m2!1sen!2sus"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg">
+      </iframe>
+
+      <a href="https://www.google.com/maps/place/Forest+Park/@38.6371562,-90.2883723,17z/data=!3m1!4b1!4m6!3m5!1s0x87d8b5469178c4c9:0x9d27c5026db294aa!8m2!3d38.637152!4d-90.2857974!16zL20vMDMwNjM5?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        class="inline-block mt-4 bg-[#F76C5E] hover:bg-[#d9564a] text-white px-6 py-2 rounded-full shadow-md">
+        View on Google Maps
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-6 text-[#3E2723] text-sm">
+    Thank You
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      easing: 'ease-in-out', // easing for animations
+    });
+  </script>
+
+</body>
+</html>

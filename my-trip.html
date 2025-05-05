@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Trip</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif !important;
+    }
+  </style>
+</head>
+<body class="bg-[#FDF6EC] text-[#3E2723] font-sans transition-colors duration-300">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-[#C79A61] dark:bg-[#9A7A3D] text-white p-4 flex justify-between items-center shadow-md">
+    <a href="index.html" class="text-2xl font-bold hover:text-[#2C786C] rounded">St. Louis Main Attractions</a>
+    <div>
+      <a href="index.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Home</a>
+      <a href="main-attractions.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Main Attractions</a>
+      <a href="my-trip.html" class="px-4 py-2 hover:text-[#2C786C] rounded">My Trip</a>
+    </div>
+  </nav>
+
+  <!-- My Trip Section -->
+  <section class="p-6">
+    <h2 class="text-3xl font-semibold mb-6">My Trip</h2>
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="myTripList">
+    </div>
+  </section>
+
+  <footer class="text-center p-6 text-[#3E2723] text-sm">
+    Thank You
+  </footer>
+
+  <script>
+    // Map URLs for each place - You can replace these with actual embed URLs for the locations.
+    const mapUrls = {
+      "Gateway Arch": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.0695050963495!2d-90.1891395746082!3d38.62428206277387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b2e26e15bcb5%3A0xf8383c57426ed4f1!2sGateway%20Arch%20National%20Park!5e0!3m2!1sen!2sus!4v1744684553211!5m2!1sen!2sus",
+      "Forest Park": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.5098252813846!2d-90.28837232460755!3d38.637156162018485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b5469178c4c9%3A0x9d27c5026db294aa!2sForest%20Park!5e0!3m2!1sen!2sus!4v1744684929481!5m2!1sen!2sus",
+      "St. Louis Zoo": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.607184736702!2d-90.29574110321043!3d38.63491689999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b55ccc04062d%3A0x6075080197e8e830!2sSaint%20Louis%20Zoo!5e0!3m2!1sen!2sus!4v1744685183699!5m2!1sen!2sus",
+      "Missouri Botanical Garden": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.5697801357646!2d-90.26195472460874!3d38.612771363449106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b4ffa9d2cd81%3A0x60b0c580fcde5080!2sMissouri%20Botanical%20Garden!5e0!3m2!1sen!2sus!4v1744685011030!5m2!1sen!2sus",
+      "City Museum": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3116.661019248955!2d-90.20327252460773!3d38.63367866222248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b33dc2801e55%3A0xc97c4420308aca04!2sCity%20Museum!5e0!3m2!1sen!2sus!4v1744684857229!5m2!1sen!2sus",
+      "Busch Stadium": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6234.283240455684!2d-90.19539582460824!3d38.622622962871226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31b440bcf17%3A0xa57962d7e3509f27!2sBusch%20Stadium!5e0!3m2!1sen!2sus!4v1744684748633!5m2!1sen!2sus",
+      "St. Louis art Museum": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6232.832319393438!2d-90.29706602460743!3d38.639310361892086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b5576e47b955%3A0x97a4b1dc139c963a!2sSaint%20Louis%20Art%20Museum!5e0!3m2!1sen!2sus!4v1745808357932!5m2!1sen!2sus",
+    };
+
+    // Load trip items from localStorage
+    window.onload = function() {
+      const trip = JSON.parse(localStorage.getItem('myTrip')) || [];
+      const tripList = document.getElementById('myTripList');
+      
+      if (trip.length === 0) {
+        tripList.innerHTML = "<div class='col-span-full text-center text-lg'>No attractions added to your trip yet!</div>";
+      } else {
+        trip.forEach(place => {
+          const listItem = document.createElement('div');
+          listItem.classList.add('bg-[#FFF3E2]', 'p-4', 'rounded-lg', 'shadow-md', 'flex', 'flex-col', 'items-center', 'justify-between', 'border', 'border-[#E0C097]');
+          listItem.innerHTML = `
+            <h3 class="text-2xl font-semibold text-[#2C786C] mb-4">${place}</h3>
+            <div class="w-full mb-4">
+              <a href="${place.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-')}.html" class="block text-center bg-[#1E40AF] text-white py-2 px-4 rounded mb-2 hover:bg-[#1E3A8A]">Go to Page</a>
+              <button class="remove-trip text-center bg-[#F76C5E] text-white py-2  px-4 rounded mb-2 w-full" hover:bg-red-600 data-place="${place}">Remove</button>
+            </div>
+            <div class="w-full mb-4">
+              <iframe src="${mapUrls[place]}" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          `;
+          tripList.appendChild(listItem);
+        });
+      }
+
+      // Add event listeners for remove buttons
+      document.querySelectorAll('.remove-trip').forEach(button => {
+        button.addEventListener('click', function() {
+          const place = this.getAttribute('data-place');
+          let trip = JSON.parse(localStorage.getItem('myTrip')) || [];
+          trip = trip.filter(item => item !== place);  // Remove the place from the trip array
+          localStorage.setItem('myTrip', JSON.stringify(trip));  // Update localStorage
+          this.closest('div').remove(); 
+          alert(place + ' has been removed from your trip!');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

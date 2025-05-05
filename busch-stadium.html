@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="transition-colors duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busch Stadium - St. Louis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#FDF6EC] text-[#3E2723] font-sans transition-colors duration-300">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-[#C79A61] dark:bg-[#9A7A3D] p-4 flex justify-between items-center shadow-md">
+    <a href="index.html" class="text-2xl font-bold hover:text-[#2C786C] rounded">St. Louis Travel</a>
+    <div>
+      <a href="index.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Home</a>
+      <a href="main-attractions.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Main Attractions</a>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative h-80 bg-cover bg-center" style="background-image: url('images/busch-stadium.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative text-center text-white z-10 flex flex-col justify-center items-center h-full">
+      <h1 class="text-4xl font-bold">Busch Stadium</h1>
+      <p class="text-xl mt-2">Catch a game or take a tour of the St. Louis Cardinals' home turf.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-10 space-y-10">
+
+    <!-- Video Section -->
+    <section class="text-center bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097]" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold mb-4 text-[#2C786C]">Inside Busch Stadium</h2>
+      <div class="aspect-video w-full rounded-md shadow-lg">
+        <iframe 
+          class="w-full h-full rounded-md"
+          src="https://www.youtube.com/embed/tkul61tw6-A?si=-Ls9Cux3gffpVWtI" 
+          title="Busch Stadium" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Visitor Info -->
+    <section class="bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097]" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-2xl font-semibold mb-4 text-[#2C786C]">Plan Your Visit</h3>
+      <ul class="text-lg space-y-3">
+        <li><strong>Opening Hours:</strong> 9:00 AM – 7:00 PM (Game days may vary)</li>
+        <li><strong>Best Time to Visit:</strong> During baseball season (April to October)</li>
+        <li><strong>Nearby Places:</strong>
+          <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
+            <li><a href="https://www.google.com/maps/place/Ballpark+Village/@38.6239087,-90.194488,17z/data=!3m2!4b1!5s0x87d8b31b7f30cd1b:0x47f7d9af59308070!4m6!3m5!1s0x87d8b31b9be97ba1:0xe4fa859bce3a212e!8m2!3d38.6239045!4d-90.1919131!16s%2Fg%2F1z44bgrcp?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-600 hover:underline">Ballpark Village</a></li>
+            <li><a href="https://www.google.com/maps/place/Citygarden+Sculpture+Park/@38.6266846,-90.1962822,16z/data=!3m1!4b1!4m6!3m5!1s0x87d8b3197dd7cdf9:0xab91dcb20aeb6124!8m2!3d38.6266804!4d-90.1937073!16s%2Fm%2F0gtwxcd?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-600 hover:underline">Citygarden Sculpture Park</a></li>
+            <li><a href="https://www.google.com/maps/place/Old+Courthouse/@38.625686,-90.1918752,16z/data=!3m1!4b1!4m6!3m5!1s0x87d8b2e26e15bcb5:0x342899bc95464bab!8m2!3d38.6256818!4d-90.1893003!16s%2Fm%2F03hh52n?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-blue-600 hover:underline">Old Courthouse</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Google Map -->
+    <section class="bg-[#FFF3E2] p-6 rounded-lg shadow-md border border-[#E0C097] text-center" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-2xl font-semibold mb-4 text-[#2C786C]">Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6234.283240455684!2d-90.19539582460824!3d38.622622962871226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b31b440bcf17%3A0xa57962d7e3509f27!2sBusch%20Stadium!5e0!3m2!1sen!2sus!4v1744684748633!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
+
+      <!-- Google Maps Button -->
+      <a 
+        href="https://www.google.com/maps/place/Busch+Stadium/@38.622623,-90.1953958,16z/data=!3m2!4b1!5s0x87d8b31b3fd54387:0xb7d5b9be2db76995!4m6!3m5!1s0x87d8b31b440bcf17:0xa57962d7e3509f27!8m2!3d38.6226188!4d-90.1928209!16zL20vMDZrMXY1?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow-md">
+        View on Google Maps
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="text-center p-6 text-[#3E2723] text-sm">
+    Thank You
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      easing: 'ease-in-out', // easing for animations
+    });
+  </script>
+
+</body>
+</html>

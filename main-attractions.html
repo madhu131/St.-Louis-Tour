@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Attractions - St. Louis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif !important;
+    }
+  </style>
+</head>
+<body class="bg-[#FDF6EC] text-[#3E2723] font-sans transition-colors duration-300">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-[#C79A61] dark:bg-[#9A7A3D] text-white p-4 flex justify-between items-center shadow-md">
+    <a href="index.html" class="text-2xl font-bold hover:text-[#2C786C] rounded">St. Louis Main Attractions</a>
+    <div>
+      <a href="index.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Home</a>
+      <a href="main-attractions.html" class="px-4 py-2 hover:text-[#2C786C] rounded">Main Attractions</a>
+      <a href="my-trip.html" class="px-4 py-2 hover:text-[#2C786C] rounded">My Trip</a>
+    </div>
+  </nav>
+
+  <!-- Main Attractions Cards -->
+  <section class="p-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cards">
+
+    <!-- Gateway Arch -->
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/gateway-arch.jpg" alt="Gateway Arch" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">Gateway Arch</h2>
+        <p>Stand beneath the iconic Gateway Arch and enjoy stunning views of the city and the Mississippi River.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="gateway-arch.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="Gateway Arch">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forest Park -->
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/forest-park.jpg" alt="Forest Park" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">Forest Park</h2>
+        <p>Relax in one of the largest urban parks in the U.S., with lakes, gardens, and plenty of outdoor activities.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="forest-park.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="Forest Park">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- St. Louis Zoo -->
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/st-louis-zoo.jpg" alt="St. Louis Zoo" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">St. Louis Zoo</h2>
+        <p>Visit the St. Louis Zoo, home to a wide variety of animals and fun exhibits for the whole family.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="st-louis-zoo.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="St. Louis Zoo">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Missouri Botanical Garden -->
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <img src="images/missouri-botanical-garden.jpg" alt="Missouri Botanical Garden" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">Missouri Botanical Garden</h2>
+        <p>Explore one of the oldest botanical gardens in the U.S., featuring beautiful landscapes and historic structures.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="missouri-botanical-garden.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="Missouri Botanical Garden">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- St. Louis Art Museum -->
+    <div class="card" data-aos="fade-up" data-aos-delay="500">
+      <img src="images/st-louis-art-museum.jpg" alt="St. Louis Art Museum" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">St. Louis Art Museum</h2>
+        <p>Discover the beauty of art at one of the country's premier art museums with a vast collection from various periods.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="st-louis-art-museum.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="St. Louis Art Museum">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- City Museum -->
+    <div class="card" data-aos="fade-up" data-aos-delay="600">
+      <img src="images/city-museum.jpg" alt="City Museum" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">City Museum</h2>
+        <p>Explore the unique City Museum, a giant playground that offers fun for both kids and adults alike.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="city-museum.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="City Museum">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Busch Stadium -->
+    <div class="card" data-aos="fade-up" data-aos-delay="700">
+      <img src="images/busch-stadium.jpg" alt="Busch Stadium" class="w-full h-48 object-cover rounded-t">
+      <div class="p-4 bg-[#FFF3E2] shadow-md rounded-b border border-[#E0C097]">
+        <h2 class="text-xl font-semibold text-[#2C786C]">Busch Stadium</h2>
+        <p>Catch a game or take a tour of Busch Stadium, the home of the St. Louis Cardinals.</p>
+        <div class="flex space-x-2 mt-4">
+          <a href="busch-stadium.html" class="bg-[#F76C5E] text-white p-2 rounded flex-1 text-center">Watch Video</a>
+          <button class="add-to-trip bg-[#F76C5E] text-white p-2 rounded flex-1" data-place="Busch Stadium">Add to My Trip</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="text-center p-6 text-[#3E2723] text-sm">
+    Thank You
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Function to handle adding places to "My Trip"
+    document.querySelectorAll('.add-to-trip').forEach(button => {
+      button.addEventListener('click', function() {
+        const place = this.getAttribute('data-place');
+        let trip = JSON.parse(localStorage.getItem('myTrip')) || [];
+        if (!trip.includes(place)) {
+          trip.push(place);
+          localStorage.setItem('myTrip', JSON.stringify(trip));
+          alert(place + ' added to your trip!');
+        } else {
+          alert(place + ' is already in your trip.');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
